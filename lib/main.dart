@@ -11,6 +11,7 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.teal,
         body: SafeArea(
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 CircleAvatar(
                   radius: 50.0,
@@ -43,8 +44,44 @@ class MyApp extends StatelessWidget {
                   indent: 50.0,
                   endIndent: 50.0,
                 ),
-                Container(
+                Card(
                   color: Colors.white,
+                  margin: EdgeInsets.symmetric(horizontal: 25.0,vertical: 10.0),
+                  child:ListTile(
+                    leading:Icon(
+                      Icons.phone,
+                      //size: 10.0,
+                      color: Colors.teal,
+                    ),
+                    title:Text(
+                      '+918124672345',
+                      style: TextStyle(
+                        fontSize: 20.0,
+                        fontFamily: 'SourceSansPro',
+                        color: Colors.teal,
+                      ),
+                    ) ,
+                  ),
+
+                ),
+                Card(
+                  color: Colors.white,
+                  margin: EdgeInsets.symmetric(horizontal: 25.0,vertical: 10.0),
+                  child:ListTile(
+                    leading:Icon(
+                      Icons.email,
+                      size: 20.0,
+                      color: Colors.teal,
+                    ),
+                    title: Text(
+                      'merin@gmail.com',
+                      style: TextStyle(
+                        fontSize: 20.0,
+                        fontFamily: 'SourceSansPro',
+                        color: Colors.teal,
+                      ),
+                    ) ,
+                  ),
                 ),
               ],
             )),
